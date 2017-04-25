@@ -1,0 +1,16 @@
+{
+	"name": "tsc-tests",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"build": "yarn buildBase && yarn buildPartial",
+		"buildBase": "$(yarn bin)/tsc --module amd --outFile out/base.js src/ts/base/main.ts",
+		"buildPartial": "$(yarn bin)/tsc --module amd --outFile out/partial.js src/ts/partial/main.ts"
+	},
+	"repository": "git@github.com:josketres/tsc-partial-bundles.git",
+	"author": "Josue Zarzosa <josue.zarzosa@esailors.de>",
+	"license": "MIT",
+	"dependencies": {
+		"typescript": "^2.2.2"
+	}
+}
